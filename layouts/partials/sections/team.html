@@ -1,0 +1,52 @@
+{{ $sectionID := replace (lower .section.name) " " "-" }}
+{{ if .section.id }}
+{{ $sectionID = .section.id }}
+{{ end }}
+
+{{ $project:= site.Data.project }}
+{{ if (index site.Data site.Language.Lang).project }}
+{{ $project = (index site.Data site.Language.Lang).project }}
+{{ end }}
+
+<div class="container-fluid anchor pb-5 achievements-section">
+  {{ if not (.section.hideTitle) }}
+  <h1 class="text-center">
+    <span id="{{ $sectionID }}"></span>{{ .section.name }}
+  </h1>
+  {{ else }}
+  <h1 class="text-center" style="display: none">
+    <span id="{{ $sectionID }}"></span>{{ .section.name }}
+  </h1>
+  {{ end }}
+  {{ if $project.maintainers }}
+  <div class="container">
+    <div class="row">
+      {{ range $project.maintainers }}
+      {{ $avatar:= "/images/default-avatar.png" }}
+      {{ if .image }}
+        {{ $avatar = .image }}
+      {{ end }}
+      {{ $avatar := resources.Get $avatar }}
+
+      <div class="col col-sm-12 col-lg-4">
+        <div class="container content text-center">
+          <div class="image">
+            <img src="{{ $avatar.RelPermalink }}"
+              class="rounded-circle mx-auto d-block img-fluid"
+              width="50%" height="50%"
+              alt="{{ .name }} Picture"
+          />
+          </div>
+          <div class="info">
+            <p class="name"><a href="https://github.com/{{ .github }}">{{ .name }}</a></p>
+            <p class="position">{{ .position }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+<!-- <div class="container content text-center">
+ -->

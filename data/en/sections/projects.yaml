@@ -1,0 +1,65 @@
+# section information
+section:
+  name: Educates projects
+  id: projects
+  enable: true
+  weight: 8
+  showOnNavbar: false
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Core
+  filter: "core"
+- name: Extensions
+  filter: "extensions"
+- name: Labs
+  filter: "labs"
+
+# your projects
+projects:
+- name: Educates Training Platform
+  logo: /images/sections/projects/kubernetes.png
+#  role: Contributor
+#  timeline: "March 2018 - Present"
+  repo: https://github.com/vmware-tanzu-labs/educates-training-platform # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: Interactive workshop environments in Kubernetes.
+  tags: ["core", "kubernetes", "cloud"]
+
+- name: Educates GitHub Actions
+#  logo: /images/sections/projects/tensorflow.png
+#  role: Developer
+#  timeline: "Jun 2018 - Present"
+  repo: https://github.com/vmware-tanzu-labs/educates-github-actions
+  #url: ""
+  summary: GitHub actions to publish workshops.
+  tags: ["core", "github", "authoring"]
+
+- name: GitOps Workshop Configurer
+#  role: Team Lead
+#  timeline: "Jan 2017 - Nov 2017"
+  repo: https://github.com/educates/educates-workshop-gitops-configurer
+  #url: ""
+  summary: Deploy your workshops and portals in a GitOps way
+  tags: ["extensions","gitops", "operator"]
+
+- name: Labs Installation Guides
+  #logo: /images/sections/projects/no-code.png
+  #role: Nothing
+  #timeline: "Oct 2019 - Dec 2019"
+  repo: https://github.com/educates/labs-installation-guides
+  #url: ""
+  summary: Learn how to install Educates
+  tags: ["labs", "installation", "guide"]
+
+- name: Labs Authoring Guides
+  # logo: /images/sections/projects/toha.png
+  # role: Owner
+  # timeline: "Jun 2019 - Present"
+  repo: https://github.com/educates/labs-authoring-guides
+  summary: Learn how to author workshops with Educates.
+  tags: ["labs","author"]

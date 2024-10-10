@@ -1,0 +1,35 @@
+shortname: "Educates"
+longname: "Educates Training Platform"
+
+background:
+  image: "/images/site/educates-logo-small.png"
+  colour: "#000000" 
+logo:
+  main: "/images/site/educates-logo-small.png"
+  inverted: "/images/site/educates-logo.svg"
+  favicon: "/images/site/favicon.png"
+
+projectInfo:
+  github: https://github.com/educates
+  slack: slack.educates.dev
+  docs: https://docs.educates.dev
+
+maintainers:
+  - name: "Graham Dumpleton"
+    email: "graham.dumpleton@educates.dev"
+    github: grahamdumpletong
+    image: "/images/author/graham.jpeg"
+    position: "Project Lead"
+  - name: "Jorge Morales"
+    email: "jorge@educates.dev"
+    github: jorgemoralespou
+    image: "/images/author/jorge.jpeg"
+    position: "Product Manager and Developer"
+
+# some summary about the project. These will show as carrousel in the landing page
+summary:
+  - Interactive workshop environments in Kubernetes
+  - Open-Source
+  - Secure
+  - Scalable
+  - Extensible

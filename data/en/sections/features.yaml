@@ -1,0 +1,51 @@
+# section information
+section:
+  name: Features
+  id: features
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Features.
+# Give a summary of you each feature in the summary section.
+features:
+- name: Kubernetes Cloud Native
+  logo: /images/sections/skills/kubernetes.png
+  summary: "Cloud native application that runs on Kubernetes and provides it's own CRDs."
+
+- name: Developer friendly
+#  logo: /images/sections/skills/go.png
+  summary: "Enables local development environment to be productive from minute zero."
+#  categories: ["basic", "language"]
+
+- name: Run on the cloud
+#  logo: /images/sections/skills/cloud.png
+  summary: "Easily installable on most of the major clouds such as GCP, AWS, Azure etc."
+#  categories: ["others"]
+
+- name: Secure
+#  logo: /images/sections/skills/docker.svg
+  summary: "Provides a secure sandbox for your users to learn safely on a shared cluster."
+#  categories: ["container"]
+
+- name: Scalable
+#  logo: /images/sections/skills/prometheus.png
+  summary: "Can scale to thousands of users and workshops without any performance degradation."
+#  categories: ["basic"]
+
+- name: Themable
+#  logo: /images/sections/skills/linux.png
+  summary: "Customiaze the look and feel of the portals and workshops to fit your own style."
+#  categories: ["others"]
+
+- name: Extensible
+#  logo: /images/sections/skills/git.png
+  summary: "Extend the basic capabilities to adapt to the technologies that you want to showcase."
+#  categories: ["basic"]
+
+- name: Open-Source
+#  logo: /images/sections/skills/c++.png
+  summary: "Developed as an open-source project with a great community of developers and users behind."
+#  categories: ["basic", "language"]
