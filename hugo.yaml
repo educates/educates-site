@@ -40,15 +40,15 @@ params:
 
     # Configure theme color settings
     theme:
-      enable: true
+      enable: false
       services:
-        light: true # enable light theme. default "true"
+        light: false # enable light theme. default "true"
         dark: true # enable dark theme. default "true"
-        default: light # can be either light, dark or system. default "system"
+        default: dark # can be either light, dark or system. default "system"
 
     # Enable and configure portfolio
     portfolio:
-      enable: true
+      enable: false
 
     # Enable and configure blog posts
     blog:

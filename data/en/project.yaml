@@ -1,9 +1,12 @@
 shortname: "Educates"
 longname: "Educates Training Platform"
+description: "The Educates project provides a system for hosting interactive workshop environments in Kubernetes, or on top of a local container runtime. It can be used for self paced or supervised workshops. It can also be useful where you need to package up demos of applications hosted in Kubernetes or a local container runtime."
 
 background:
   image: "/images/site/educates-logo-small.png"
   colour: "#000000" 
+  screenshot: "/images/site/screenshot.png"
+
 logo:
   main: "/images/site/educates-logo-small.png"
   inverted: "/images/site/educates-logo.svg"

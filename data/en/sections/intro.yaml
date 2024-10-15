@@ -1,0 +1,9 @@
+  section:
+    name: Project Intro
+    id: intro
+    enable: true
+    weight: 2
+    showOnNavbar: false
+    hideTitle: false
+    fullHeight: true
+    template: sections/intro.html

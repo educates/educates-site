@@ -3,7 +3,7 @@ section:
   name: Features
   id: features
   enable: true
-  weight: 2
+  weight: 4
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
@@ -37,7 +37,7 @@ features:
 
 - name: Themable
 #  logo: /images/sections/skills/linux.png
-  summary: "Customiaze the look and feel of the portals and workshops to fit your own style."
+  summary: "Customise the look and feel of the portals and workshops to fit your own style."
 #  categories: ["others"]
 
 - name: Extensible

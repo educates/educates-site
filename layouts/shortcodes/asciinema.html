@@ -1,3 +1,10 @@
 {{ $id := .Get "id" }}
-<script src="https://asciinema.org/a/{{ $id }}.js" id="asciicast-{{ $id }}" async="true">
+{{ $autoplay := .Get "autoplay" | default "true" }}
+{{ $loop := .Get "loop" | default "true" }}
+<script src="https://asciinema.org/a/{{ $id }}.js" 
+        id="asciicast-{{ $id }}" 
+        async="true" 
+        {{ if eq $autoplay "true" }}data-autoplay{{ end }} 
+        {{ if eq $loop "true" }}data-loop{{ end }}
+        >
 </script>
