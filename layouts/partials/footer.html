@@ -113,6 +113,10 @@
                 <li><a href={{ printf "%s" $value }} target="_blank" rel="noopener">
                   <span><i class="fab fa-slack"></i></span> <span>{{ $value }}</span>
                 </a></li>
+                {{ else if (eq $key "github-org") }}
+                <li><a href={{ printf "%s" $value }} target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>{{ $value }}</span>
+                </a></li>
               {{ else if (eq $key "github") }}
                 <li><a href={{ printf "%s" $value }} target="_blank" rel="noopener">
                   <span><i class="fab fa-github"></i></span> <span>{{ $value }}</span>

@@ -13,7 +13,8 @@ logo:
   favicon: "/images/site/favicon.png"
 
 projectInfo:
-  github: https://github.com/educates
+  github: https://github.com/vmware-tanzu-labs/educates-training-platform
+  github-org: https://github.com/educates
   slack: slack.educates.dev
   docs: https://docs.educates.dev
 
@@ -22,12 +23,12 @@ maintainers:
     email: "graham.dumpleton@educates.dev"
     github: grahamdumpletong
     image: "/images/author/graham.jpeg"
-    position: "Project Lead"
+    position: "Project Lead Engineer"
   - name: "Jorge Morales"
     email: "jorge@educates.dev"
     github: jorgemoralespou
     image: "/images/author/jorge.jpeg"
-    position: "Product Manager and Developer"
+    position: "Project Manager and Engineer"
 
 # some summary about the project. These will show as carrousel in the landing page
 summary:
