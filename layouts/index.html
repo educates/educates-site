@@ -18,14 +18,7 @@
     <!--================= add analytics if enabled =========================-->
     {{- partial "analytics.html" . -}}
     <script>
-      theme = localStorage.getItem('theme-scheme') || localStorage.getItem('darkmode:color-scheme') || 'light';
-      if (theme == 'system') {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          theme = 'dark';
-        } else {
-          theme = 'light';
-        }
-      }
+      theme = 'dark';
       document.documentElement.setAttribute('data-theme', theme);
     </script>
   </head>
