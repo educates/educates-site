@@ -102,24 +102,24 @@
           <ul>
             {{ range $key,$value:= $project.projectInfo }}
               {{ if (eq $key "email") }}
-                <li><a href={{ printf "mailto:%s" $value }} target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>{{ $value }}</span>
+                <li><a href={{ printf "mailto:%s" $value.url }} target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>{{ $value.text }}</span>
                 </a></li>
               {{ else if (eq $key "docs") }}
-                <li><a href={{ printf "%s" $value }} target="_blank" rel="noopener">
-                  <span><i class="fa-solid fa-book"></i></span> <span>{{ $value }}</span>
+                <li><a href={{ printf "%s" $value.url }} target="_blank" rel="noopener">
+                  <span><i class="fa-solid fa-book"></i></span> <span>{{ $value.text }}</span>
                 </a></li>
               {{ else if (eq $key "slack") }}
-                <li><a href={{ printf "%s" $value }} target="_blank" rel="noopener">
-                  <span><i class="fab fa-slack"></i></span> <span>{{ $value }}</span>
+                <li><a href={{ printf "%s" $value.url }} target="_blank" rel="noopener">
+                  <span><i class="fab fa-slack"></i></span> <span>{{ $value.text }}</span>
                 </a></li>
                 {{ else if (eq $key "github-org") }}
-                <li><a href={{ printf "%s" $value }} target="_blank" rel="noopener">
-                  <span><i class="fab fa-github"></i></span> <span>{{ $value }}</span>
+                <li><a href={{ printf "%s" $value.url }} target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>{{ $value.text }}</span>
                 </a></li>
               {{ else if (eq $key "github") }}
-                <li><a href={{ printf "%s" $value }} target="_blank" rel="noopener">
-                  <span><i class="fab fa-github"></i></span> <span>{{ $value }}</span>
+                <li><a href={{ printf "%s" $value.url }} target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>{{ $value.text }}</span>
                 </a></li>
               {{ else if reflect.IsMap $value }}
                 <li>

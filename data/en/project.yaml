@@ -13,10 +13,18 @@ logo:
   favicon: "/images/site/favicon.png"
 
 projectInfo:
-  github: https://github.com/vmware-tanzu-labs/educates-training-platform
-  github-org: https://github.com/educates
-  slack: slack.educates.dev
-  docs: https://docs.educates.dev
+  github: 
+    url: https://github.com/vmware-tanzu-labs/educates-training-platform
+    text: "Educates Training Platform"
+  github-org: 
+    url: https://github.com/educates
+    text: "Educates GitHub Organisation"
+  slack: 
+    url: https://kubernetes.slack.com/archives/C05UWT4SKRV
+    text: Educates Channel in Kubernetes Slack
+  docs: 
+    link: https://docs.educates.dev
+    text: "Educates Documentation"
 
 maintainers:
   - name: "Graham Dumpleton"
