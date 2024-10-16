@@ -11,105 +11,8 @@
 {{ $sections = (index site.Data site.Language.Lang).sections }}
 {{ end }}
 
-{{/* TODO: Create a transparent background-image, or allow for it to not exist */}}
-{{ $backgroundImage:= "/images/site/empty-background.jpg" }}
-{{ if $project.backgroundImage }}
-{{ $backgroundImage = $project.backgroundImage }}
-{{ end }}
-
-
-{{ $projectLogo:= "/images/default-avatar.png" }}
-{{ if $project.logo.main }}
-{{ $projectLogo = $project.logo.main }}
-{{ end }}
-{{ $projectLogo := resources.Get $projectLogo }}
-
-{{/* apply image processing. don't use "Fit" in svg or gif because its not supported */}}
-{{ if and $projectLogo (and (ne $projectLogo.MediaType.SubType "svg") ( ne $projectLogo.MediaType.SubType "gif")) }}
-{{ $projectLogo = $projectLogo.Fit "148x148" }}
-{{ end }}
-{{/* get file that matches the filename as specified as src="" in shortcode */}}
-{{ $src := resources.Get $backgroundImage }}
-
-{{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
-
-{{ $tinyw := default "500x" }}
-{{ $smallw := default "800x" }}
-{{ $mediumw := default "1200x" }}
-{{ $largew := default "1500x" }}
-
-{{/* resize the src image to the given sizes */}}
-
-{{ $tiny := $src.Resize $tinyw }}
-{{ $small := $src.Resize $smallw }}
-{{ $medium := $src.Resize $mediumw }}
-{{ $large := $src.Resize $largew }}
-
-{{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
-{{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
-
-{{ if lt $src.Width "500" }}
-{{ $tiny := $src}}
-{{ $small := $src}}
-{{ $medium := $src}}
-{{ $large := $src}}
-{{ end }}
-
-{{ if lt $src.Width "800" }}
-{{ $small := $src}}
-{{ $medium := $src}}
-{{ $large := $src}}
-{{ end }}
-
-{{ if lt $src.Width "1200" }}
-{{ $medium := $src}}
-{{ $large := $src}}
-{{ end }}
-
-{{ if lt $src.Width "1500" }}
-{{ $large := $src}}
-{{ end }}
-
 <div class="container-fluid intro" id="intro">
   <style>
-    /* 0 to 299 */
-    #introPageBackgroundImageDivStyled {
-      background-image: url('{{ $tiny.RelPermalink }}');
-    }
-
-    /* 300 to X */
-    @media (min-width: 500px) and (max-width: 800px) {
-
-      /* or 301 if you want really the same as previously.  */
-      #introPageBackgroundImageDivStyled {
-        background-image: url('{{ $small.RelPermalink }}');
-      }
-    }
-
-    @media (min-width: 801px) and (max-width: 1200px) {
-
-      /* or 301 if you want really the same as previously.  */
-      #introPageBackgroundImageDivStyled {
-        background-image: url('{{ $medium.RelPermalink }}');
-      }
-    }
-
-    @media (min-width: 1201px) and (max-width: 1500px) {
-
-      /* or 301 if you want really the same as previously.  */
-      #introPageBackgroundImageDivStyled {
-        background-image: url('{{ $large.RelPermalink }}');
-      }
-    }
-
-    @media (min-width: 1501px) {
-
-      /* or 301 if you want really the same as previously.  */
-      #introPageBackgroundImageDivStyled {
-        background-image: url('{{ $src.RelPermalink }}');
-      }
-    }
-
     video {
       width: 45vw;
       /* 25% of the viewport width */
@@ -131,7 +34,7 @@
   </style>
     <span class="on-the-fly-behavior"></span>
     <div
-      id="homePageBackgroundImageDivStyled"
+      id="backgroundIntro"
       class="background container-fluid"
     ></div>
   <div class="row content">

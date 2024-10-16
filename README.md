@@ -11,10 +11,14 @@ To build and run this site localy:
 $ hugo mod tidy
 
 # install dependencies
-$ hugo mod npm pack
+$ # hugo mod npm pack
 
 $ npm install
 
 $ hugo server
+
+# or
+
+$ hugo server --disableFastRender
 ```
 
