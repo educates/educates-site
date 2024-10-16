@@ -13,11 +13,8 @@
 
 <div class="container-fluid intro" id="intro">
   <style>
-    video {
-      width: 45vw;
-      /* 25% of the viewport width */
-      height: 45vh;
-      /* 25% of the viewport height */
+    #screenshot {
+      width: 80%;
     }
 
     .left-half,
@@ -28,8 +25,9 @@
     }
 
     .left-half {
-        padding: 10%; /* Border of 20% on each side */
-            box-sizing: border-box; 
+        /* Border of 20% on each side */
+        padding: 10%; 
+        box-sizing: border-box; 
     }
   </style>
     <span class="on-the-fly-behavior"></span>
@@ -44,10 +42,9 @@
     </span>
     </div>
     <div class="col-md-6 right-half d-flex justify-content-center align-items-center">
-      <video controls class="video" autoplay loop>
-        <source src="videos/screencast.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
+      <picture id="screenshot">
+        <img src="images/screenshot.png" alt="Screenshot">
+      </picture>
     </div>
     {{ if $sections }}
     {{ range first 2 (where (sort $sections "section.weight") ".section.enable" true) }}

@@ -49,3 +49,8 @@ features:
 #  logo: /images/sections/skills/c++.png
   summary: "Developed as an open-source project with a great community of developers and users behind."
 #  categories: ["basic", "language"]
+
+- name: Rocking documentation
+  logo: /images/sections/skills/docs.png
+  summary: "Comprehensive documentation to help you get started and understand the internals."
+#  categories: ["basic", "language"]
